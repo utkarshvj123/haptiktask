@@ -22,13 +22,20 @@ export default function Slider(props) {
       <input
         id={slidersLabels}
         type="range"
-        defaultValue={defaultValue}
-        min={min}
-        max={max}
+        defaultValue={defaultValue ? defaultValue : defaultPropsObject.defaultValue}
+        min={min ? min : defaultPropsObject.min}
+        max={max ? max : defaultPropsObject.max}
         className={sliderClass}
         onChange={handleSliderChange}
-        step={step}
+        step={step ? step : defaultPropsObject.step}
       />
     </div>
   );
 }
+//-----if you are not sending this as a prop then it will use this props so that code will not break
+const defaultPropsObject = {
+  min: 0,
+  max: 100,
+  step: 1,
+  defaultValue: 0,
+};
