@@ -6,7 +6,7 @@ export default class Home extends Component {
     super(props);
     this.state = {
       sliderName: "Display Name",
-      defaultValue: 10,
+      defaultValue: 0,
     };
   }
 
