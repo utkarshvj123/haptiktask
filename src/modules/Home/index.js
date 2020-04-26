@@ -6,23 +6,23 @@ export default class Home extends Component {
     super(props);
     this.state = {
       sliderName: "Display Name",
-      slidersWeights: 0,
+      defaultValue: 10,
     };
   }
 
   handleSliderChange = (event) => {
     this.setState({
-      slidersWeights: event.target.value,
+        defaultValue: event.target.value,
     });
   };
 
   render() {
-    const { slidersWeights, sliderName } = this.state;
-    const { min, max, step, defaultValue } = objectDetail;
+    const { defaultValue, sliderName } = this.state;
+    const { min, max, step } = objectDetail;
     return (
       <Slider
         handleSliderChange={this.handleSliderChange}
-        slidersWeights={slidersWeights}
+        slidersWeights={defaultValue}
         slidersLabels={sliderName}
         defaultValue={defaultValue}
         min={min}
@@ -48,5 +48,4 @@ const objectDetail = {
   min: 0,
   max: 100,
   step: 1,
-  defaultValue: 0,
 };
