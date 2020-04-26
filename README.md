@@ -1,8 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Created a reusable component for slider in that i have created an default props object so that when you are not passing any props then our code will not break.
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
+
 
 ### `yarn start`
 
